@@ -1,8 +1,5 @@
 @echo off
 
-REM Terminal 1
-start wt new-tab wsl bash -ic "sudo service apache2 restart && sudo service mysql restart && sudo service cron restart"
-
 REM Terminal 2
 start wt new-tab wsl bash -ic "source ~/goto-dict1 && sudo php artisan schedule:work"
 
@@ -11,3 +8,6 @@ start wt new-tab wsl bash -ic "source ~/goto-dict1 && sudo php artisan queue:wor
 
 REM Terminal 4
 start wt new-tab wsl bash -ic "source ~/goto-dict1 && sudo php artisan fetch-past-connections"
+
+REM Terminal 1
+start wt new-tab wsl bash -ic "sudo service apache2 restart && sudo service mysql restart && sudo service cron restart"
